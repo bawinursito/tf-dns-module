@@ -9,13 +9,7 @@ dns_entry = [
         dns_records = {
             "www.bayu.com" = {
                 type = "A"
-                records = ["202.202.202.1", "202.202.202.2"]   
-       
-            },
-            "www3.bayu.com" = {
-                type = "A"
-                records = ["202.202.202.1", "202.202.202.2"]   
-       
+                records = ["202.202.202.1", "202.202.202.2"]  
             },
             "www2.bayu.com" = {
                 type = "CNAME"
@@ -24,7 +18,37 @@ dns_entry = [
                 geolocation_routing_policy = {
                     country = "ID"
                 }
-            }
+            },
+            "www3.bayu.com" = {
+                type = "A"
+                records = ["202.202.202.4", "202.202.202.5"]  
+            },
+        }
+    },
+    {
+        zone_name = "agung.com"
+        private_zone = false
+        tags = {
+            env = "development"
+            bu = "agung"
+        }
+        dns_records = {
+            "www.agung.com" = {
+                type = "A"
+                records = ["202.202.202.10", "202.202.202.2", "202.202.202.10"]  
+            },
+            "www2.agung.com" = {
+                type = "CNAME"
+                records = ["www.bayu.com"]
+                set_identifier = "indonesia-www.agung.com"
+                geolocation_routing_policy = {
+                    country = "ID"
+                }
+            },
+            "www3.agung.com" = {
+                type = "A"
+                records = ["202.202.202.4"]  
+            },
         }
     },
     {
